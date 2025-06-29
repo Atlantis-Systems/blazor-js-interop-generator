@@ -1,27 +1,21 @@
 mode: Mainline
 branches:
-  master:
+  main:
     mode: ContinuousDelivery
     tag: ''
     increment: Patch
-    prevent-increment-of-merged-branch-version: true
     track-merge-target: false
     source-branches: ['develop', 'feature', 'support', 'hotfix']
     tracks-release-branches: false
     is-release-branch: false
     is-mainline: true
-    pre-release-weight: 55000
 ignore:
   sha: []
 increment: Inherit
-prevent-increment-of-merged-branch-version: false
 tag-prefix: '[vV]'
 continuous-delivery-fallback-tag: ci
 major-version-bump-message: '\+semver:\s?(breaking|major)'
 minor-version-bump-message: '\+semver:\s?(feature|minor)'
 patch-version-bump-message: '\+semver:\s?(fix|patch)'
 no-bump-message: '\+semver:\s?(none|skip)'
-legacy-semver-padding: 4
-build-metadata-padding: 4
-commits-since-version-source-padding: 4
 commit-message-incrementing: Enabled
